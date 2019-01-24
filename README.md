@@ -1,11 +1,14 @@
 # Senior_Project-Social-Analytics-
 Data Analytics from Crimes News 
+
 How to install deepcut
+
 dependencies:
 
-python 3.6 (from anaconda 5.2.0)
-keras 
-tensorflow
+1. python 3.6 (from anaconda 5.2.0)
+2. keras 
+3. tensorflow
+
 Install deepcut 
 
 pip install deepcut
