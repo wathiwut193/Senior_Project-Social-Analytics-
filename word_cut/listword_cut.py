@@ -31,4 +31,4 @@ def newsreader_wordcut():
     finnish_time = time.time()
     print(finnish_time-start_time)
 
-newsreader_wordcut()
+newsreader_wordcut() #test
