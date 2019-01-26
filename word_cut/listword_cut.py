@@ -38,7 +38,7 @@ def newsreader_wordcut():
         writefile.write('|'.join(word_cut))
         writefile.close()
 
-    print(word_cut)
+    print(word_cut) #da
     finnish_time = time.time()
     print(finnish_time-start_time)
 
