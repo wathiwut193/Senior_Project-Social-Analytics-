@@ -33,7 +33,9 @@ def newsreader_wordcut():
 
     with codecs.open("news/output/1_ตัด.txt",'w+',encoding='utf-8') as writefile: #writefile
         writefile.read()
+        writefile.write('|')
         writefile.write('|'.join(word_cut))
+        writefile.write('|')
         writefile.close()
 
     print(word_cut)
