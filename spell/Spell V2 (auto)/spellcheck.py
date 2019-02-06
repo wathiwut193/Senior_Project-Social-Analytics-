@@ -11,7 +11,7 @@ def read_dictionary_file():
         return
 
 
-    with open("place.txt","r",encoding="utf8") as f:
+    with open("corpus/places.txt","r",encoding="utf8") as f:
         contents = f.read()
 
     dictionary = set(
@@ -64,6 +64,7 @@ def P(word, N=sum(WORDS.values())):
 def correction(word):
     'แสดงคำที่เป็นไปได้มากที่สุด'
     return max(spell(word), key=P)
+    
 def known(words):
     return list(w for w in words if w in WORDS)
 
@@ -76,39 +77,13 @@ def edits1(word):
     return set(deletes + transposes + replaces + inserts)
 def edits2(word):
     return (e2 for e1 in edits1(word) for e2 in edits1(e1))
-    
-"""
-def keyboardlayout(word) :   
-    if letters=='ๅ'
-"""
-"""
-def autocorrect(word):
-    x = [(word[:i], word[i:])    for i in range(len(word) + 1)]
-    a = [L + c + R              for L,R in x for c in letters]
-    b = [L + c + R[1:]           for L,R in x if L for c in letters]
-    kl = [L + c + R[1:]           for L,R in x if L for c in letters
-        
-        ]
-    return  known(kl)
-"""
-num = ['๐','๑','๒','๓','๔','๕','๖','๗','๘','๙','0','1','2','3','4','5','6','7','8','9']
-
-def condition(word):
-    if word=='มากก' or word=='มากกก' or word=='มากกกก' or word=='มากกกกก' or word=='มากกกกกก':
-            return ['มากๆ']
-    elif word==' ' :
-            return [' ']
-    elif word in num:
-            return str(word)
-            
-
 
 def spell(word):
     if word=='':
         return ''
     else:
 
-        return (known([word]) or (condition(word)) or known(edits1(word)) or known(edits2(word)) or [word])
+        return (known([word]) or known(edits1(word)) or known(edits2(word)) or [word])
 
 
         
