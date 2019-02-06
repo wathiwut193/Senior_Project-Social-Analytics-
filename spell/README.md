@@ -8,3 +8,13 @@ This demo was developed based on Pythainlp.
 ```bash
 $ pip install pythainlp
 ```
+Pythainlp library from https://github.com/PyThaiNLP/pythainlp in spell correction function.
+
+## Usage
+
+```python
+from pythainlp.spell.pn import *
+
+spell('word') # Insert a word for correcting and it returns a list of spell candidate words.
+correction('word') # Insert a word for correcting and it returns a nearest probability one correction word.
+```
