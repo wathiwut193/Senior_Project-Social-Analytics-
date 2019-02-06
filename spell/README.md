@@ -5,4 +5,6 @@ It's correcting the word that have a wrong spelling to nearest probability corre
 This demo was developed based on Pythainlp.
 
 ## Installation
+```bash
 $ pip install pythainlp
+```
