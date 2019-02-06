@@ -1,8 +1,6 @@
 import re
 from collections import Counter
 from pythainlp.corpus.thaiword import get_data
-from thai import *
-from thai_letters import *
 
 dictionary = set()
 
