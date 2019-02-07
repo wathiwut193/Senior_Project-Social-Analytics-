@@ -54,7 +54,6 @@ def P(word, N=sum(WORDS.values())):
 def correction(word):
     'แสดงคำที่เป็นไปได้มากที่สุด'
     return max(spell(word), key=P)
-    
 def known(words):
     return list(w for w in words if w in WORDS)
 
