@@ -33,16 +33,6 @@ letters = ['ก', 'ข', 'ฃ', 'ค', 'ฅ', 'ฆ', 'ง', 'จ', 'ฉ', 'ช',
 def _no_filter(word):
     return True
 
-"""
-def _is_thai_and_not_num(word):
-    for ch in word:
-        if ch != "." and not is_thaichar(ch):
-            return False
-        if ch in "๐๑๒๓๔๕๖๗๘๙0123456789":
-            return False
-    return True
-"""
-
 def _keep(word_freq, min_freq, min_len, max_len, dict_filter):
     """
     Keep only Thai words with at least min_freq frequency
