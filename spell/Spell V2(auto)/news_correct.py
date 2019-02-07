@@ -9,7 +9,6 @@ x = text.split("|")
 start = time.time()
 for i in x:
         if is_spelled_correctly(i):
-                """print(spell(i))"""
                 
         else:
             print(correction(i))
