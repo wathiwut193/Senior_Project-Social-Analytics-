@@ -4,11 +4,11 @@ Create on 22 /1 /2019 11:57
 @Coder Wathiwut Kongjan
 """
 import deepcut
-import codecs
 import time
 
+
 def newsreader_wordcut():
-    start_time =time.time()
+    start_time = time.time()
 
     """
     How :
@@ -17,29 +17,19 @@ def newsreader_wordcut():
         Output are write new file 
 
     Reference :
-        Dictionary custom by add compond word from Wikipedia
+        Dictionary custom by add compound word from Wikipedia
     """
-    with codecs.open("news/input/2.txt",'r',encoding='utf-8') as readfile: #readfile
+    with open("news/input/1.txt", 'r', encoding='utf-8') as readfile:  # readfile
         data = readfile.read()
-        cut = data.split('"')
-        readfile.close()
+        word_cut = deepcut.tokenize(data, custom_dict='custom_dict_V1.txt')
 
-    with codecs.open("news/output/2_ตัด.txt",'w+',encoding='utf-8') as write_split: #write_split
-        write_split.write(''.join(cut))
-        write_split.close()
-    
-    with codecs.open("news/output/2_ตัด.txt",'r+',encoding='utf-8') as readfile_split: #read_data
-        read_data = readfile_split.read()
-        word_cut = deepcut.tokenize(read_data, custom_dict='compond_word.txt')
-        readfile_split.close()
-
-    with codecs.open("news/output/2_ตัด.txt",'w+',encoding='utf-8') as writefile: #writefile
+    with open("news/output/1_ตัด.txt", 'w+', encoding='utf-8') as writefile:  # writefile
         writefile.read()
         writefile.write('|'.join(word_cut))
-        writefile.close()
 
     print(word_cut)
     finnish_time = time.time()
-    print(finnish_time-start_time)
+    print(finnish_time - start_time)
+
 
 newsreader_wordcut()
